@@ -25,6 +25,7 @@ app.use(express.bodyParser());
 
 app.all('*', function(req, res, next) 
 {
+    // TODO(2016-02-19): Only allow trusted origins
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type');

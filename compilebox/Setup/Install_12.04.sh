@@ -1,5 +1,11 @@
 #!/bin/sh
 
+sh ./permission_check.sh; permission_rc=$?
+if [[ $permission_rc != 0  ]]
+then
+  exit 1
+fi
+
 ###########################
 # Docker SETUP
 ###########################
